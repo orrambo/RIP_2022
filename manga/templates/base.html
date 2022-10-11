@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '../static/examp.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header class="container-fluid">
+      <div class="row">
+          <div class="col"><img src="http://127.0.0.1:8000/media/images/logo.svg" style="width: 20%" alt=""></div>
+          <div class="col">Название</div>
+          <div class="col">Поиск</div>
+          <div class="col">Профиль</div>
+      </div>
+    </header>
+  <div class=" wrapper">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

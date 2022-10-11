@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Книга №{{ data.manga.id }}{% endblock %}
+
+{% block content %}
+    <div class="wrapper">
+        <img src="http://127.0.0.1:8000/media/{{data.manga.image}}">
+        <div>Название: {{ data.manga.name }}</div>
+        <div>Описание: {{ data.manga.description }}</div>
+    </div>
+{% endblock %}

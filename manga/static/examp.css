@@ -1,0 +1,16 @@
+/*.wrapper {*/
+/*    width: 50vh;*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%,-50%);*/
+/*}*/
+
+body {
+    background-color: #242424 !important;
+    color: #cbcbcb !important;
+}
+
+header {
+    background-color: #343434;
+}
