@@ -16,4 +16,3 @@ def GetManga(request, id):
         'manga': Manga.objects.filter(id=id)[0],
     }})
 
-

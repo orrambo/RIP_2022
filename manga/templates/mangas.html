@@ -7,7 +7,7 @@
 <div class="">
     <div class="wrapper">
     {% for manga in data.mangas %}
-        <img  src="http://127.0.0.1:8000/media/{{manga.image}}" >
+        <img src="http://127.0.0.1:8000/media/{{manga.image}}" >
        {% include 'qw.html' with elem=manga%}
     {% empty %}
         <li>Список пуст</li>
