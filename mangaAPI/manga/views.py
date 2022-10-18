@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from manga.serializers import MangaSerializer, UserSerializer, CommentSerializer
-from manga.models import Manga, User, Comment
+from manga.serializers import MangaSerializer, UserSerializer, CommentSerializer, SellSerializer
+from manga.models import Manga, User, Comment, Sell
 
 
 class MangaViewSet(viewsets.ModelViewSet):
@@ -28,3 +28,12 @@ class CommentViewSet(viewsets.ModelViewSet):
     # queryset всех пользователей для фильтрации по дате последнего изменения
     queryset = Comment.objects.all().order_by('id')
     serializer_class = CommentSerializer  # Сериализатор для модели
+
+
+class SellViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint, который позволяет просматривать и редактировать акции компаний
+    """
+    # queryset всех пользователей для фильтрации по дате последнего изменения
+    queryset = Sell.objects.all().order_by('sell_date')
+    serializer_class = SellSerializer  # Сериализатор для модели
