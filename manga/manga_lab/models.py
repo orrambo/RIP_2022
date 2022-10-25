@@ -14,18 +14,3 @@ class Manga(models.Model):
 
     def __str__(self):
         return self.name
-
-
-# class Image(models.Model):
-#     title = models.CharField(max_length=255)
-#     image = models.ImageField(upload_to='images')
-#     # bmstu = models.ForeignKey(Manga, on_delete=models.CASCADE)
-#
-#     class Meta:
-#         managed = False
-#         db_table = 'images'
-#         verbose_name = 'Картинка'
-#         verbose_name_plural = 'Картинки'
-#
-#     def __str__(self):
-#         return self.title
