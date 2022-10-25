@@ -23,3 +23,10 @@ class Comment(models.Model):
     text = models.TextField(max_length=8000, verbose_name="Текст")
     date_modified = models.DateTimeField(auto_now=True, verbose_name="Когда последний раз обновлялся комментарий")
 
+
+class Sell(models.Model):
+    user = models.ForeignKey(User, models.DO_NOTHING, db_column='user', verbose_name="Пользователь")
+    manga = models.ForeignKey(Manga, models.DO_NOTHING, db_column='manga', verbose_name="Манга")
+    quantity = models.CharField(max_length=255, verbose_name="Количество")
+    sell_date = models.DateTimeField(auto_now=True, verbose_name="Дата продажи")
+
