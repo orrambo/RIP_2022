@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'manga_lab.apps.MangaLabConfig',
-    'rest_framework',
 ]
 
 MIDDLEWARE = [
