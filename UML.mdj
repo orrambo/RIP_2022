@@ -864,7 +864,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Веб-сервис",
+					"name": "Диаграмма компонентов",
 					"ownedViews": [
 						{
 							"_type": "UMLComponentView",
