@@ -10,7 +10,7 @@ ___
 
 ### 3. [Лабораторная работа №3.](https://github.com/orrambo/RIP_2022/tree/master/mangaAPI)
 
-### 4. Лабораторная работа №4.
+### 4. [Лабораторная работа №4.](https://github.com/orrambo/RIP_2022/tree/master/mangaFront)
 ___
 ### [Диаграммы](https://github.com/orrambo/RIP_2022/tree/master/UML.mdj)
 ___
