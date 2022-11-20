@@ -15,4 +15,3 @@ def GetManga(request, id):
         'current_date': date.today(),
         'manga': Manga.objects.filter(id=id)[0],
     }})
-

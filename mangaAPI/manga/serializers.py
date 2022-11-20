@@ -1,4 +1,4 @@
-from manga.models import Manga, User, Comment
+from manga.models import Manga, User, Comment, Sell
 from rest_framework import serializers
 
 
@@ -24,3 +24,11 @@ class CommentSerializer(serializers.ModelSerializer):
         model = Comment
         # Поля, которые мы сериализуем
         fields = ["pk", "user", "manga", "parent", "text", "date_modified"]
+
+
+class SellSerializer(serializers.ModelSerializer):
+    class Meta:
+        # Модель, которую мы сериализуем
+        model = Sell
+        # Поля, которые мы сериализуем
+        fields = "__all__"

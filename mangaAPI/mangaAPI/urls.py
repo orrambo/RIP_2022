@@ -7,6 +7,7 @@ router = routers.DefaultRouter()
 router.register(r'manga', manga_views.MangaViewSet)
 router.register(r'user', manga_views.UserViewSet)
 router.register(r'comment', manga_views.CommentViewSet)
+router.register(r'sell', manga_views.SellViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
