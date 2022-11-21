@@ -1,5 +1,6 @@
 import {useParams} from "react-router-dom";
 import {GetManga} from "../contexts/provider";
+import logo from "../manga.svg";
 
 
 function MangaPage() {
@@ -8,7 +9,7 @@ function MangaPage() {
     const manga = GetManga(mangaId);
     return (
         <div>
-            <a href = {'/'}>Начало/</a>
+            <a href = {'/'}><img className="logo" src={logo}/>/</a>
             <a href={'/commands'}>Список команд/</a>
             <a href = {'/mangas/getall'}>Манги/</a>
             <a href = {`/mangas/getbyid/${mangaId}`}>{manga.title}/</a>

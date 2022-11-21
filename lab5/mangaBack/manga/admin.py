@@ -4,7 +4,7 @@ from . import models
 
 @admin.register(models.Manga)
 class MangaAdmin(admin.ModelAdmin):
-    list_display = ["title", "price"]
+    list_display = ["title", "price", "date_modified"]
 
 
 @admin.register(models.User)

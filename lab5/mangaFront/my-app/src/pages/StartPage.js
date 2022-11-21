@@ -1,10 +1,10 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import logo from "../manga.svg";
 
 function StartPage(){
     return(
         <div>
-            <a href={`./`}>Начало</a>
+            <a href={`./`}><img className="logo" src={logo}/></a>
             <li>
                 <a href="/commands">Список команд</a>
             </li>
