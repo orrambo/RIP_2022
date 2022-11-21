@@ -1,3 +1,8 @@
 from django.contrib import admin
+from . import models
+# from .models import Image
 
-# Register your models here.
+@admin.register(models.Manga)
+class MangaAdmin(admin.ModelAdmin):
+    list_display = ["title", "price"]
+# admin.site.register(Manga)

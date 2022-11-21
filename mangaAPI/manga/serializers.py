@@ -7,7 +7,7 @@ class MangaSerializer(serializers.ModelSerializer):
         # Модель, которую мы сериализуем
         model = Manga
         # Поля, которые мы сериализуем
-        fields = ["pk", "title", "description", "price", "author", "date_modified"]
+        fields = ["pk", "title", "description", "price", "author", "date_modified", "image"]
 
 
 class UserSerializer(serializers.ModelSerializer):
