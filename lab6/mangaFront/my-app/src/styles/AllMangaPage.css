@@ -1,0 +1,41 @@
+body {
+    background-color: #242424 !important;
+    color: #cbcbcb !important;
+}
+.manga_row{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:20px 20% ;
+}
+.manga_block{
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    height: 315px;
+    position:relative;
+    padding:20px;
+}
+.manga_image{
+    display:block;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 300px;
+}
+.manga_link{
+    display:block;
+    position: absolute;
+    bottom:0;
+    width: calc(100% - 40px);
+    text-align: center;
+    text-decoration-line: none;
+}
+
+a{
+    text-decoration-line: none;
+    color: #cbcbcb !important;
+}
+.logo{
+    height: 30px;
+}

@@ -10,11 +10,11 @@ function AllMangasPage(){
             <a href = {'/'}><img className="logo" src={logo}/>/</a>
             <a href={'/commands'}>Список команд/</a>
             <a href = {'/mangas/getall'}>Манги/</a>
-            <div className="manga_row">
+            <div className="mangas_row">
                 {GetMangas().map(manga =>
-                    <div className="manga_block" key = {manga.id}>
-                        <img className="manga_image"  src={manga.image}></img>
-                        <Link className="manga_link" to={`/mangas/getbyid/${manga.id}`}>{manga.title}</Link>
+                    <div className="mangas_block" key = {manga.id}>
+                        <img className="mangas_image"  src={manga.image}></img>
+                        <Link className="mangas_link" to={`/mangas/getbyid/${manga.id}`}>{manga.title}</Link>
                     </div>)}
             </div>
         </div>

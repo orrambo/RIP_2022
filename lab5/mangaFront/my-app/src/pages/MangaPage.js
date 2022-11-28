@@ -13,9 +13,10 @@ function MangaPage() {
             <a href={'/commands'}>Список команд/</a>
             <a href = {'/mangas/getall'}>Манги/</a>
             <a href = {`/mangas/getbyid/${mangaId}`}>{manga.title}/</a>
-            <div>
+            <div className="manga_block">
                 <img src={manga.image}></img>
                 <div>{manga.title}</div>
+                <div>{manga.description}</div>
                 <div>{manga.price}</div>
             </div>
         </div>
