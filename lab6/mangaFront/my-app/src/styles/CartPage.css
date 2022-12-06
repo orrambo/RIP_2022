@@ -9,14 +9,16 @@
     padding:2% 20% 2% 20%;
 }
 .cart_line{
-    display: block;
+    display: flex;
     position:relative;
     justify-content: center;
-
+    flex-direction: row;
+    align-items: center;
+    padding:1% 2% 1% 2%;
 }
 .cart_image_block{
     display: inline-block;
-    text-align: center;
+    text-align: left;
     width: 20%;
     height:100%;
 
@@ -32,6 +34,7 @@
     width: 20%;
     height:100%;
     padding:12px;
+
 }
 .cart_title{
 
@@ -63,4 +66,7 @@
     width: calc(100% - 40px);
     text-align: center;
     text-decoration-line: none;
+}
+hr{
+    display: block;
 }

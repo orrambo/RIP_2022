@@ -31,27 +31,30 @@ function Cart(){
             </div>
             <div className="cart_block">
             {GetCart().map(cart =>
-                <div key = {cart.manga} className="cart_line">
-                    <div className="cart_image_block">
-                        <Link to={`/mangas/getbyid/${mangas[cart.manga - mangas[0].id].id}`}>
-                            <img className="cart_image" src={`${mangas[cart.manga - mangas[0].id].image}`} />
-                        </Link>
-                    </div>
-                    <div className="cart_title_block">
-                    <Link className="cart_title" to={`/mangas/getbyid/${mangas[cart.manga - mangas[0].id].id}`}>
-                        {mangas[cart.manga - mangas[0].id].title}
-                    </Link>
-                    </div>
-                    <div className="cart_price_block">
-                        <div className="cart_price">
-                        {mangas[cart.manga - mangas[0].id].price}  ₽
+                <div>
+                    <div key = {cart.manga} className="cart_line">
+                        <div className="cart_image_block">
+                            <Link to={`/mangas/getbyid/${mangas[cart.manga - mangas[0].id].id}`}>
+                                <img className="cart_image" src={`${mangas[cart.manga - mangas[0].id].image}`} />
+                            </Link>
                         </div>
-                    </div>
-                    <div className="cart_delete_block">
-                    <input id="buy_button" className="delete_button" type="submit" value="Удалить" onClick={()=>{del(cart.id)}}/>
+                        <div className="cart_title_block">
+                        <Link className="cart_title" to={`/mangas/getbyid/${mangas[cart.manga - mangas[0].id].id}`}>
+                            {mangas[cart.manga - mangas[0].id].title}
+                        </Link>
+                        </div>
+                        <div className="cart_price_block">
+                            <div className="cart_price">
+                            {mangas[cart.manga - mangas[0].id].price}  ₽
+                            </div>
+                        </div>
+                        <div className="cart_delete_block">
+                        <input id="buy_button" className="delete_button" type="submit" value="Удалить" onClick={()=>{del(cart.id)}}/>
+                        </div>
                     </div>
                     <hr/>
                 </div>)}
+
             {/*<button>Купить</button>*/}
             </div>
         </div>
