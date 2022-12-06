@@ -1,6 +1,7 @@
 from django.db import models
 
 
+
 class Manga(models.Model):
     title = models.CharField(max_length=255, verbose_name="Название")
     description = models.TextField(max_length=8000, verbose_name="Описание")
@@ -29,4 +30,10 @@ class Sell(models.Model):
     manga = models.ForeignKey(Manga, models.DO_NOTHING, db_column='manga', verbose_name="Манга")
     quantity = models.CharField(max_length=255, verbose_name="Количество")
     sell_date = models.DateTimeField(auto_now=True, verbose_name="Дата продажи")
+
+
+class Cart(models.Model):
+    user = models.ForeignKey(User, models.DO_NOTHING, db_column='user', verbose_name="Пользователь")
+    manga = models.ForeignKey(Manga, models.DO_NOTHING, db_column='manga', verbose_name="Манга")
+    quantity = models.IntegerField(verbose_name="Количество")
 

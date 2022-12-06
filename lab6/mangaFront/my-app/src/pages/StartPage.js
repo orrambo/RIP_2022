@@ -2,12 +2,13 @@ import React from "react";
 import logo from "../manga.svg";
 
 function StartPage(){
+
     return(
         <div>
-            <a href={`./`}><img className="logo" src={logo}/></a>
-            <li>
-                <a href="/commands">Список команд</a>
-            </li>
+            <a href={`./`}>Главная</a>
+            <div className={`blocker ${localStorage.getItem('theme')}`}>
+                <p className={`app ${localStorage.getItem('theme')}`}>Добро пожаловать</p>
+            </div>
         </div>
     )
 }

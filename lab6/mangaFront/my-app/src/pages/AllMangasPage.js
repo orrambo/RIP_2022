@@ -7,7 +7,7 @@ function AllMangasPage(){
 
     return (
         <div>
-            <a href = {'/'}><img className="logo" src={logo}/>/</a>
+            <a href = {'/'}>Главная/</a>
             <a href={'/commands'}>Список команд/</a>
             <a href = {'/mangas/getall'}>Манги/</a>
             <div className="manga_row">

@@ -1,5 +1,6 @@
 export const initialState = {
-    mangas:[]
+    mangas:[],
+    cart:[],
 };
 
 export function reducer(state, action) {
@@ -8,7 +9,16 @@ export function reducer(state, action) {
             return {
                 mangas: action.payload
             }
+        case 'GET_MANGA':
+            return {
+                mangas: action.payload
+            }
+        case 'GET_CART':
+            return {
+                cart: action.payload
+            }
         default:
             return state
+
     }
 }

@@ -10,6 +10,8 @@ router.register(r'manga', manga_views.MangaViewSet)
 router.register(r'user', manga_views.UserViewSet)
 router.register(r'comment', manga_views.CommentViewSet)
 router.register(r'sell', manga_views.SellViewSet)
+router.register(r'cart', manga_views.CartViewSet)
+router.register(r'minmax', manga_views.MinMaxViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.

@@ -33,8 +33,21 @@ export function GetManga(manga_id) {
     fetch(`http://127.0.0.1:8000/manga/${manga_id}`)
         .then(response => response.json())
         .then(data => {
-          dispatch({type: 'GET_DATA', payload: data});
+          dispatch({type: 'GET_MANGA', payload: data});
         })
   }, [])
   return state.mangas
+}
+
+export function GetCart() {
+    const [state, dispatch] = useReducer(reducer, initialState)
+
+    useEffect(() => {
+        fetch('http://127.0.0.1:8000/cart/')
+            .then(response => response.json())
+            .then(data => {
+                dispatch({type: 'GET_CART', payload: data});
+            })
+    }, [])
+    return state.cart
 }
