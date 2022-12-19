@@ -1,0 +1,68 @@
+.register-block1{
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.title-block1{
+    color: #cbcbcb;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+    text-align: center;
+}
+.form-block1{
+    margin-top: 2rem;
+    color: #cbcbcb;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 300;
+    text-align: center;
+}
+.input-block331{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 0.5rem;
+    color: #242424;
+    width: 20%;
+    border-radius: 0.375rem;
+    border-width: 1px;
+}
+.text-block331{
+    display: block;
+    color: #cbcbcb;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+}
+.action-block331{
+    margin-top: 25px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #242424;
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-duration: 200ms;
+    color: #cbcbcb;
+    border-color: #cbcbcb;
+    letter-spacing: 0.025em;
+    width: 20%;
+    border-radius: 0.375rem;
+    margin-left: 40%;
+}
+.repage-block1{
+    margin-top: 2rem;
+    color: #cbcbcb;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 300;
+    text-align: center;
+}

@@ -47,6 +47,7 @@ export function GetCart() {
             .then(response => response.json())
             .then(data => {
                 dispatch({type: 'GET_CART', payload: data});
+                console.log(data);
             })
     }, [])
     return state.cart

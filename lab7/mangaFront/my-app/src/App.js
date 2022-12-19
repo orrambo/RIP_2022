@@ -8,6 +8,8 @@ import { MangasProvider } from "./contexts";
 import Navigation from "./pages/Navigation";
 import SearchPage from "./pages/SearchPage";
 import CartPage from "./pages/CartPage";
+import {LoginPage} from "./pages/LoginPage";
+import RegistrationPage from "./pages/RegistrationPage";
 
 function App() {
 
@@ -17,6 +19,12 @@ function App() {
             <Switch>
                 <Route exact path="/">
                     <StartPage></StartPage>
+                </Route>
+                <Route path="/login">
+                    <LoginPage/>
+                </Route>
+                <Route path="/registration">
+                    <RegistrationPage/>
                 </Route>
                 <Route path="/mangas/cart">
                     <CartPage/>

@@ -4,7 +4,7 @@ import {GetCart, GetMangas} from "../contexts/provider";
 import "../styles/CartPage.css"
 
 
-function Cart(){
+function CartPage(){
     const mangas = GetMangas()
 
     const del=(id_manga)=> {
@@ -60,4 +60,4 @@ function Cart(){
         </div>
     );
 }
-export default Cart;
+export default CartPage;

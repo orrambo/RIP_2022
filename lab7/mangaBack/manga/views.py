@@ -5,6 +5,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from .service import MangaFilter
 
 
+
 class MangaViewSet(viewsets.ModelViewSet):
     """
     API endpoint, который позволяет просматривать и редактировать акции компаний

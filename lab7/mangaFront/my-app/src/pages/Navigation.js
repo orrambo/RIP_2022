@@ -4,29 +4,28 @@ import logo from "../manga.svg";
 
 function Navbar() {
 
-    const get_user=()=> {
+    const unautorise = () =>{
 
-        fetch(`http://127.0.0.1:8000/user/1`)
-            .then(response => response.json())
-            .then(data => {
-                setUser(data.login)
-                return(data.login)
+        fetch("http://127.0.0.1:8000/rest-auth/logout/", {
+            method: "post",
+            headers: {
+                "Authorization": `Token ${sessionStorage.getItem('token')}`,
+                "Content-Type": "application/json"
+            },
+        })
+            .then(res => res.json())
+            .then(res => {
+                console.log(res);
+                sessionStorage.removeItem('token')
+                localStorage.removeItem('user_id')
+                localStorage.removeItem('user_login')
+                window.location.replace("http://127.0.0.1:3000/login");
+            })
+            .catch(function (reason) {
+                console.log(reason);
             })
     }
 
-    const [user, setUser] = useState(get_user)
-
-    const autorise = () =>{
-        if (localStorage.getItem('theme') == 'light'){
-            localStorage.setItem('theme' , 'dark')
-            window.location.replace("/");
-        }else{
-            get_user(1)
-            localStorage.setItem('theme' , 'light')
-            window.location.replace("/");
-
-        }
-    }
     return (
         <div className="navigation">
             <div className="nav_block">
@@ -40,15 +39,32 @@ function Navbar() {
                     <a className="" href="/mangas/getall">Манга</a>
                 </div>
                 <div className="nav_cart">
-                    <a className={`buy_button ${localStorage.getItem('theme')}`} href="/mangas/cart">Корзина</a>
+                    {
+                        sessionStorage.getItem('token') ?
+                            <a className="nav-link" href="/mangas/cart">Корзина</a>
+                            :
+                            <div></div>
+                    }
                 </div>
                 <div className={"nav_log_in"}>
-                    <input id="buy_button2" className={`buy_button2 ${localStorage.getItem('theme')}`} type="submit" value="Войти" onClick={autorise}/>
-                    <input id="buy_button3" className={`buy_button3 ${localStorage.getItem('theme')}`} type="submit" value="Выйти" onClick={autorise}/>
+                    {
+                        sessionStorage.getItem('token') ?
+                            <input
+                                id="buy_button3"
+                                type="submit" value="Выйти"
+                                onClick={unautorise}
+                            />
+                            :
+                            <a href="http://127.0.0.1:3000/login">
+                                <input
+                                    id="buy_button2"
+                                    type="submit" value="Войти"
+                                />
+                            </a>
 
-                </div>
-                <div className={"nav_user"}>
-                    <div className={`buy_button3 ${localStorage.getItem('theme')}`}>Пользователь: {user}</div>
+
+                    }
+
                 </div>
             </div>
         </div>

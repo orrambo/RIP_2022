@@ -48,7 +48,6 @@ function  SearchPage() {
             <div className={"search_slider_block"}>
                 <div className={"search_nav"}>
                     <a href = {'/'}>Главная/</a>
-                    <a href={'/commands'}>Список команд/</a>
                     <a href = {'/mangas/getall'}>Манги/</a>
                 </div>
                 <form className={"search_form"}>

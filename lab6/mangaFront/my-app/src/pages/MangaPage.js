@@ -30,7 +30,6 @@ function MangaPage() {
     return (
         <div>
             <a href = {'/'}>Главная/</a>
-            <a href={'/commands'}>Список команд/</a>
             <a href = {'/mangas/getall'}>Манги/</a>
             <a href = {`/mangas/getbyid/${mangaId}`}>{manga.title}/</a>
             <div>
@@ -38,7 +37,7 @@ function MangaPage() {
                 <div>{manga.title}</div>
                     <div>{manga.price}</div>
                 <input id="buy_button" className={`buy_button ${localStorage.getItem('theme')}`} type="submit"
-                       value="В корзину" onClick={()=>{buy(1, 1, mangaId)}}/>
+                       value="В корзину" onClick={()=>{buy(1, 3, mangaId)}}/>
             </div>
         </div>
     );

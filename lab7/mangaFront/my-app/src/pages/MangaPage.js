@@ -36,9 +36,9 @@ function MangaPage() {
             <div>
                 <img src={manga.image}></img>
                 <div>{manga.title}</div>
-                    <div>{manga.price}</div>
+                <div>{manga.price}</div>
                 <input id="buy_button" className={`buy_button ${localStorage.getItem('theme')}`} type="submit"
-                       value="В корзину" onClick={()=>{buy(1, 1, mangaId)}}/>
+                       value="В корзину" onClick={()=>{buy(1, 3, mangaId)}}/>
             </div>
         </div>
     );

@@ -8,7 +8,6 @@ function AllMangasPage(){
     return (
         <div>
             <a href = {'/'}>Главная/</a>
-            <a href={'/commands'}>Список команд/</a>
             <a href = {'/mangas/getall'}>Манги/</a>
             <div className="manga_row">
                 {GetMangas().map(manga =>
