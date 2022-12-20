@@ -39,11 +39,11 @@ export function GetManga(manga_id) {
   return state.mangas
 }
 
-export function GetCart() {
+export function GetCart(user) {
     const [state, dispatch] = useReducer(reducer, initialState)
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/cart/')
+        fetch(`http://127.0.0.1:8000/cart/?user=${user}`)
             .then(response => response.json())
             .then(data => {
                 dispatch({type: 'GET_CART', payload: data});
@@ -51,4 +51,17 @@ export function GetCart() {
             })
     }, [])
     return state.cart
+}
+
+export function GetPurchases(userId) {
+    const [state, dispatch] = useReducer(reducer, initialState)
+
+    useEffect(() => {
+        fetch(`http://127.0.0.1:8000/sell/?user=${userId}`)
+            .then(response => response.json())
+            .then(data => {
+                dispatch({type: 'GET_PURCHASE', payload: data});
+            })
+    }, [])
+    return state.purchases
 }

@@ -6,11 +6,62 @@ import "../styles/CartPage.css"
 
 function CartPage(){
     const mangas = GetMangas()
+    const cart = GetCart(localStorage.getItem('user_id'))
+
+    const buy=()=> {
+        let order;
+        const se = {
+            user: localStorage.getItem('user_id'),
+            status: 1,
+        }
+        fetch("http://127.0.0.1:8000/sell/", {
+            method: "post",
+            headers: {
+                "Authorization": `Token ${sessionStorage.getItem('token')}`,
+                "Content-Type": "application/json"
+            },
+            withCredentials: true,
+            body: JSON.stringify(se)
+        })
+            .then(res => res.json())
+            .then(res => {
+                console.log(res)
+                order = res.id
+            })
+
+        setTimeout(() => {
+            cart.map(cart => {
+                const ob = {
+                    sell: order,
+                    manga: cart.manga,
+                    quantity: cart.quantity,
+                }
+                fetch("http://127.0.0.1:8000/purchase/", {
+                    method: "post",
+                    headers: {
+                        "Authorization": `Token ${sessionStorage.getItem('token')}`,
+                        "Content-Type": "application/json"
+                    },
+                    withCredentials: true,
+                    body: JSON.stringify(ob)
+                })
+                    .then(res => res.json())
+                    .then(res => {
+                        console.log(res);
+                    })
+                del(cart.id)
+            })
+        }, 50);
+    }
 
     const del=(id_manga)=> {
         console.log(id_manga)
         fetch(`http://127.0.0.1:8000/cart/${id_manga}`, {
             method: "DELETE",
+            headers: {
+                "Authorization": `Token ${sessionStorage.getItem('token')}`,
+                "Content-Type": "application/json"
+            },
         })
             .then(res => {
                 if (res.ok) {
@@ -30,7 +81,7 @@ function CartPage(){
                 <a href = {'/models/cart'}>Корзина</a>
             </div>
             <div className="cart_block">
-            {GetCart().map(cart =>
+            {cart.map(cart =>
                 <div>
                     <div key = {cart.manga} className="cart_line">
                         <div className="cart_image_block">
@@ -54,8 +105,9 @@ function CartPage(){
                     </div>
                     <hr/>
                 </div>)}
-
-            {/*<button>Купить</button>*/}
+                <div className={"cart_buy_block"}>
+                     <button className="cart_buy_button" onClick={()=>{buy()}}>Купить</button>
+                </div>
             </div>
         </div>
     );

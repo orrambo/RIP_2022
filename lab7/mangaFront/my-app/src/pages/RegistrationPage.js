@@ -27,6 +27,10 @@ function RegistrationPage() {
                 const token = res.data.key;
                 localStorage.setItem('token', token);
             })
+            .catch(function (reason) {
+                alert("Пароль не менее 8 символов")
+                window.location.replace("/registration")
+            })
     }
 
 
@@ -94,7 +98,7 @@ function RegistrationPage() {
                 Уже есть аккаунт?{" "}
                 <a
                     href="/login"
-                    className="font-medium text-indigo-600 text-xl hover:underline"
+                    className="login"
                 >
                     Войти
                 </a>

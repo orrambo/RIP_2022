@@ -1,0 +1,60 @@
+.navigation{
+    background-color: #323232;
+    position: sticky;
+    top:0;
+    z-index: 1;
+    height:5vh;
+    text-align: center;
+
+}
+
+.nav_logo{
+    display:inline-block;
+    width:10%;
+    height:5vh;
+
+}
+
+.logo{
+    width: 100px;
+    height:5vh;
+}
+
+.nav_home{
+    width:15%;
+    display:inline-block;
+    height:5vh;
+    top:-20%;
+    position: relative;
+    vertical-align: middle;
+}
+
+.user_logo{
+    border-radius: 100%;
+    width:7%;
+    display:inline-block;
+}
+
+.nav_sign_in{
+    width:30%;
+    display:inline-block;
+    height:5vh;
+    top:-20%;
+    position: relative;
+    vertical-align: middle;
+}
+
+.user_text{
+    display:inline-block;
+    padding-right:5%;
+}
+
+.nav_log_in{
+    padding:1%;
+    display:inline-block;
+    background-color: #323232;
+    color: #cbcbcb;
+    border-radius: 0.375rem;
+    border-width: 3px;
+    border-color: #cbcbcb;
+}

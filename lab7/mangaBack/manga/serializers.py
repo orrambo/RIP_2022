@@ -35,6 +35,14 @@ class SellSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
+class SellsPSerializer(serializers.ModelSerializer):
+    class Meta:
+        # Модель, которую мы сериализуем
+        model = Purchase
+        # Поля, которые мы сериализуем
+        fields = '__all__'
+
+
 class CartSerializer(serializers.ModelSerializer):
     class Meta:
         # Модель, которую мы сериализуем

@@ -18,7 +18,7 @@ class User(models.Model):
 
 
 class Comment(models.Model):
-    user = models.ForeignKey(User, models.DO_NOTHING, db_column='user', verbose_name="Пользователь")
+    user = models.IntegerField( verbose_name="Пользователь")
     manga = models.ForeignKey(Manga, models.DO_NOTHING, db_column='manga', verbose_name="Манга")
     parent = models.ForeignKey("self", models.DO_NOTHING, db_column='parent', blank=True, null=True, verbose_name="Родитель")
     text = models.TextField(max_length=8000, verbose_name="Текст")
@@ -26,14 +26,19 @@ class Comment(models.Model):
 
 
 class Sell(models.Model):
-    user = models.ForeignKey(User, models.DO_NOTHING, db_column='user', verbose_name="Пользователь")
-    manga = models.ForeignKey(Manga, models.DO_NOTHING, db_column='manga', verbose_name="Манга")
-    quantity = models.CharField(max_length=255, verbose_name="Количество")
+    user = models.IntegerField( verbose_name="Пользователь")
     sell_date = models.DateTimeField(auto_now=True, verbose_name="Дата продажи")
+    status = models.IntegerField(verbose_name="Статус")
+
+
+class Purchase(models.Model):
+    sell = models.ForeignKey(Sell, models.DO_NOTHING, db_column='sell', verbose_name="Продажа")
+    manga = models.ForeignKey(Manga, models.DO_NOTHING, db_column='manga', verbose_name="Манга")
+    quantity = models.IntegerField(verbose_name="Количество")
 
 
 class Cart(models.Model):
-    user = models.ForeignKey(User, models.DO_NOTHING, db_column='user', verbose_name="Пользователь")
+    user = models.IntegerField( verbose_name="Пользователь")
     manga = models.ForeignKey(Manga, models.DO_NOTHING, db_column='manga', verbose_name="Манга")
     quantity = models.IntegerField(verbose_name="Количество")
 

@@ -16,47 +16,40 @@
     font-size: 100px;
 }
 
-.navigation{
-    background-color: #323232;
-    position: sticky;
-    top:0;
-    z-index: 1;
-    height:9vh;
-
-}
-
-.nav_logo{
-    display:inline-block;
-    width:10%;
-}
-
-.nav_home{
-    width:20%;
-    display:inline-block;
-    padding-right: 20px;
-}
-
-.nav_manga{
-    width:20%;
-    display:inline-block;
-}
-.nav_cart{
-    width:20%;
-    display:inline-block;
-}
-.nav_log_in{
-    width:20%;
-    display:inline-block;
-}
-nav_user{
-    width:24%;
-    display:inline-block;
-}
-
 .buy_button2.light{
     visibility: collapse;
 }
 
 .buy_button3.dark{
     visibility: collapse;
+}
+
+a{
+    text-decoration-line: none;
+    color: #cbcbcb;
+}
+a:hover{
+    color:#ffac1c;
+}
+button{
+    color: #cbcbcb;
+}
+button:active {
+    color: #ffac1c;
+    border-color: #ffac1c;
+}
+button:hover{
+    color:#ffac1c;
+    border-color:#ffac1c;
+}
+input{
+    color: #cbcbcb;
+}
+input:active{
+    color: #ffac1c;
+    border-color: #ffac1c;
+}
+input:hover{
+    color:#ffac1c;
+    border-color:#ffac1c;
 }

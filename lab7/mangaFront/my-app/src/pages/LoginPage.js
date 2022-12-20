@@ -50,7 +50,7 @@ export function LoginPage() {
     return (
         <div className="register-block1">
             <h1 className="title-block">
-                Войти
+                Вход
             </h1>
             <form className="form-block1">
                 <div className="">
@@ -82,7 +82,7 @@ export function LoginPage() {
                     />
                 </div>
             </form>
-            <div className="">
+            <div className="log_in_btn">
                 <button
                     className="action-block331"
                     onClick={() => Login()}
@@ -94,6 +94,7 @@ export function LoginPage() {
             <p className="repage-block1">
                 {" "}
                 Отсутствует аккаунт?{" "}
+                <br/>
                 <a
                     href="/registration"
                     className="font-medium text-indigo-600 text-xl hover:underline"

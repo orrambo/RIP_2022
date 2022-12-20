@@ -1,5 +1,5 @@
 from django_filters import rest_framework as filters
-from manga.models import Manga
+from manga.models import Manga, Cart, Sell
 import django_filters
 
 
@@ -12,3 +12,19 @@ class MangaFilter(filters.FilterSet):
     class Meta:
         model = Manga
         fields = ['price', 'title']
+
+
+class CartFilter(filters.FilterSet):
+    user = CharFilterInFilter(field_name='user', lookup_expr='in')
+
+    class Meta:
+        model = Cart
+        fields = ['user']
+
+
+class PurchasesFilter(filters.FilterSet):
+    user = CharFilterInFilter(field_name='user', lookup_expr='in')
+
+    class Meta:
+        model = Sell
+        fields = ['user']

@@ -57,7 +57,23 @@
     padding:12px;
 }
 .delete_button{
-
+    padding:5px;
+    background-color: #242424;
+    color: #cbcbcb;
+    border-radius: 0.375rem;
+    border-width: 3px;
+    border-color: #cbcbcb;
+}
+.cart_buy_block{
+    padding: 1% 2% 1% 2%;
+}
+.cart_buy_button{
+    padding:5px;
+    background-color: #242424;
+    color: #cbcbcb;
+    border-radius: 0.375rem;
+    border-width: 3px;
+    border-color: #cbcbcb;
 }
 .cart_link{
     display:block;

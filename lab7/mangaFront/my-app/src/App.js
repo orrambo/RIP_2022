@@ -2,7 +2,6 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 import MangaPage from "./pages/MangaPage";
 import StartPage from "./pages/StartPage";
 import React from "react";
-import AllMangasPage from "./pages/AllMangasPage";
 import './App.css'
 import { MangasProvider } from "./contexts";
 import Navigation from "./pages/Navigation";
@@ -10,6 +9,7 @@ import SearchPage from "./pages/SearchPage";
 import CartPage from "./pages/CartPage";
 import {LoginPage} from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
+import PurchasePage from "./pages/PurchasePage";
 
 function App() {
 
@@ -22,6 +22,9 @@ function App() {
                 </Route>
                 <Route path="/login">
                     <LoginPage/>
+                </Route>
+                <Route path="/purchase">
+                    <PurchasePage/>
                 </Route>
                 <Route path="/registration">
                     <RegistrationPage/>
