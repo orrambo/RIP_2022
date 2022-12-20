@@ -1,4 +1,7 @@
-
+.start_page{
+    text-align: center;
+    font-size: 50px;
+}
 .app.dark {
     visibility: hidden;
 }

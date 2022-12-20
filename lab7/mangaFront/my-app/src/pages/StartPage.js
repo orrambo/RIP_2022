@@ -1,14 +1,17 @@
 import React from "react";
-import logo from "../manga.svg";
+import '../styles/StartPage.css'
 
 function StartPage(){
 
     return(
         <div>
             <a href={`./`}>Главная</a>
-            <div className={`blocker ${localStorage.getItem('theme')}`}>
-                <p className={`app ${localStorage.getItem('theme')}`}>Добро пожаловать</p>
-            </div>
+            {
+                sessionStorage.getItem('token') ?
+                    <div className={"start_page"}>Добро пожаловать {localStorage.getItem('user_login')}</div>
+                    :
+                    <div className={"start_page"}>Войдите в аккаунт</div>
+            }
         </div>
     )
 }
