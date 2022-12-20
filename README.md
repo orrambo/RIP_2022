@@ -17,6 +17,8 @@ ___
 ### 6. [Лабораторная работа №6.](https://github.com/orrambo/RIP_2022/tree/master/lab6)
 
 ### 7. [Лабораторная работа №7.](https://github.com/orrambo/RIP_2022/tree/master/lab7)
+
+### 8. [Лабораторная работа №8.](https://github.com/orrambo/RIP_2022/tree/master/lab7)
 ___
 ### [Диаграммы](https://github.com/orrambo/RIP_2022/tree/master/UML.mdj)
 ___
