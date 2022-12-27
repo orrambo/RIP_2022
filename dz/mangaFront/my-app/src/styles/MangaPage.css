@@ -1,0 +1,121 @@
+.bread{
+    padding: 2% 0% 0% 3%;
+}
+.single_manga_block{
+    display:flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:20px 20% ;
+    text-align: center;
+}
+.single_manga_title{
+    font-size: 24px;
+    padding-bottom: 2%;
+}
+.single_im_ds_block{
+    padding:10px;
+}
+.single_manga_image{
+    display:inline-block;
+    width: 30%;
+
+}
+.single_manga_description{
+    display:inline-block;
+    width:50%;
+    padding:10px;
+    vertical-align: top;
+}
+.single_pr_cart_block{
+    padding:10px;
+}
+.single_manga_cart{
+    display:inline-block;
+    width:30%;
+    padding:5px;
+}
+.single_manga_btn{
+    display:inline-block;
+    width:50%;
+    padding:5px;
+    background-color: #242424;
+    color: #cbcbcb;
+    border-radius: 0.375rem;
+    border-width: 3px;
+    border-color: #cbcbcb;
+}
+.single_manga_price{
+    display:inline-block;
+    width:50%;
+    padding:10px;
+    vertical-align: top;
+}
+.plus_minus_btn{
+    padding:5px;
+    background-color: #242424;
+    color: #cbcbcb;
+    border-radius: 0.375rem;
+    border-width: 3px;
+    border-color: #cbcbcb;
+    margin:0 1% 0 1%;
+}
+
+
+
+
+
+.modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.modal.active{
+    opacity: 1;
+    pointer-events: all;
+}
+.modal__content{
+    vertical-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #323232;
+    height: 150px;
+    width: 300px;
+}
+.modal_block{
+    width:100%;
+    height:100%;
+}
+
+.modal_title{
+    margin-bottom: 10px;
+}
+.modal_price{
+    display: block;
+}
+.buy_button35{
+    display: block;
+    margin: 20px;
+    justify-content: center;
+}
+.manga_change_btn{
+    padding:5px;
+    background-color: #242424;
+    color: #cbcbcb;
+    border-radius: 0.375rem;
+    border-width: 3px;
+    border-color: #cbcbcb;
+    margin:0 1% 0 1%;
+}
+

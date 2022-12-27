@@ -1,0 +1,58 @@
+.start_page{
+    text-align: center;
+    font-size: 50px;
+}
+.app.dark {
+    visibility: hidden;
+}
+
+.buy_button.dark{
+    visibility: hidden;
+}
+
+.blocker.light{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: center;
+    font-family:  Impact;
+    font-size: 100px;
+}
+
+.buy_button2.light{
+    visibility: collapse;
+}
+
+.buy_button3.dark{
+    visibility: collapse;
+}
+
+a{
+    text-decoration-line: none;
+    color: #cbcbcb;
+}
+a:hover{
+    color:#ffac1c;
+}
+button{
+    color: #cbcbcb;
+}
+button:active {
+    color: #ffac1c;
+    border-color: #ffac1c;
+}
+button:hover{
+    color:#ffac1c;
+    border-color:#ffac1c;
+}
+input{
+    color: #cbcbcb;
+}
+input:active{
+    color: #ffac1c;
+    border-color: #ffac1c;
+}
+input:hover{
+    color:#ffac1c;
+    border-color:#ffac1c;
+}

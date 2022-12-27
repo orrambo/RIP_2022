@@ -1,0 +1,80 @@
+.register-block1{
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    margin-left:35%;
+    margin-top:5%;
+}
+.title-block1{
+    color: #cbcbcb;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+    text-align: center;
+}
+.form-block1{
+    margin-top: 2rem;
+    color: #cbcbcb;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 300;
+    text-align: center;
+}
+.input-block331{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+    color: #cbcbcb;
+    background-color: #242424;
+    width: 25%;
+    min-width: 75px;
+    border-radius: 0.375rem;
+    border-width: 3px;
+    border-color: #cbcbcb;
+    text-align: center;
+}
+.text-block331{
+    display: block;
+    color: #cbcbcb;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+}
+.action-block331{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #242424;
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-duration: 200ms;
+    color: #cbcbcb;
+    letter-spacing: 0.025em;
+    width: 30%;
+    min-width: 75px;
+    border-radius: 0.375rem;
+    border-width: 3px;
+    border-color: #cbcbcb;
+
+}
+.repage-block1{
+    margin-top: 2rem;
+    color: #cbcbcb;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 300;
+    text-align: center;
+}
+.log_in_btn{
+    text-align: center;
+    margin-top: 5%;
+    border-color: #cbcbcb;
+}
